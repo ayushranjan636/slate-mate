@@ -17,13 +17,23 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  title: "SlateMate | AI-Powered Learning. Parent-Controlled Safety.",
-  description:
-    "Empower your child's education with cutting-edge AI technology while maintaining complete control over their learning environment.",
-  icons: {
-    icon: "/favicon.ico",
+  title: {
+    default: 'SlateMate | AI for Safer Digital Learning',
+    template: '%s | SlateMate',
+  },
+  description: 'AI-powered platform for school safety, parental control, and academic performance.',
+  metadataBase: new URL('https://www.slatemate.in'),
+  openGraph: {
+    siteName: 'SlateMate',
+    images: '/og-image.jpg',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    creator: '@slatemate',
   },
 }
+
 
 export default function RootLayout({
   children,
