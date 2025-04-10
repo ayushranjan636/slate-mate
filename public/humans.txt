@@ -1,0 +1,10 @@
+/* TEAM */
+Developer: Ayush Ranjan
+Site: https://www.slatemate.in
+Instagram: @slatemate.in
+
+/* THANKS */
+Tech Stack: Next.js, React, Django, PostgreSQL, AWS, Tailwind
+
+/* SITE */
+Last update: 2025-04-11
