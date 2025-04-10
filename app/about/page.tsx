@@ -1,6 +1,6 @@
 import { Suspense } from "react"
 import type { Metadata } from "next"
-import AboutContent from "./_components/about-content"
+import AboutContent from "./_components/AboutPageContent"
 
 export const metadata: Metadata = {
   title: "About Us | SlateMate",
