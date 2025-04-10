@@ -1,3 +1,4 @@
+import { Suspense } from "react"
 import type React from "react"
 import { Poppins } from "next/font/google"
 import type { Metadata } from "next"
@@ -22,7 +23,6 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.ico",
   },
-    generator: 'SlateMate'
 }
 
 export default function RootLayout({
@@ -41,13 +41,12 @@ export default function RootLayout({
             </PageTransition>
             <Footer />
           </div>
-          <Analytics />
+          <Suspense fallback={null}>
+            <Analytics />
+          </Suspense>
           <Toaster />
         </ThemeProvider>
       </body>
     </html>
   )
 }
-
-
-import './globals.css'
