@@ -1,14 +1,10 @@
 "use client"
 
-import { useSearchParams } from "next/navigation"
 import Link from "next/link"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 
-export default function NotFoundPageContent() {
-  const params = useSearchParams()
-  const from = params.get("from")
-
+export default function NotFoundPageContent({ from }: { from?: string }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -18,9 +14,8 @@ export default function NotFoundPageContent() {
     >
       <h1 className="text-5xl font-bold mb-4">404 - Page Not Found</h1>
       <p className="text-foreground/70 mb-8 text-lg">
-        We couldn't find what you were looking for{from ? ` from "${from}"` : ""}.
+        We couldn’t find what you were looking for{from ? ` from "${from}"` : ""}.
       </p>
-
       <Button asChild variant="glow">
         <Link href="/">Go back home</Link>
       </Button>

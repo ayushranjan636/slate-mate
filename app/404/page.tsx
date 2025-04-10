@@ -1,5 +1,5 @@
 import { Suspense } from "react"
-import NotFoundPageContent from "./_components/not-found-page-content"
+import NotFoundWrapper from "./_components/not-found-wrapper"
 
 export const metadata = {
   title: "Page Not Found | SlateMate",
@@ -8,8 +8,8 @@ export const metadata = {
 
 export default function NotFoundPage() {
   return (
-    <Suspense fallback={<div className="text-center p-20">Loading...</div>}>
-      <NotFoundPageContent />
+    <Suspense fallback={<div className="text-center p-20">Loading 404...</div>}>
+      <NotFoundWrapper />
     </Suspense>
   )
 }
