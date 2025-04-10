@@ -10,7 +10,7 @@ export default function LoginSearchParams() {
 
   return (
     <p className="text-sm text-muted-foreground mt-2">
-      After login, you'll be redirected to: <strong>{redirect}</strong>
+      You'll be redirected to: <strong>{redirect}</strong>
     </p>
   )
 }
