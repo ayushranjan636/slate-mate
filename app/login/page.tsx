@@ -1,7 +1,6 @@
 "use client"
 
-import type React from "react"
-
+import { Suspense } from "react"
 import { useState } from "react"
 import Link from "next/link"
 import { useRouter } from "next/navigation"
@@ -10,6 +9,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import LoginSearchParams from "./_components/login-search-params"
 
 export default function LoginPage() {
   const router = useRouter()
@@ -18,7 +18,7 @@ export default function LoginPage() {
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault()
     setIsLoading(true)
-    // Simulate login
+
     setTimeout(() => {
       setIsLoading(false)
       router.push("/")
@@ -39,6 +39,10 @@ export default function LoginPage() {
               <div className="mb-8 text-center">
                 <h1 className="text-3xl font-bold mb-2">Welcome Back</h1>
                 <p className="text-foreground/70">Sign in to access your SlateMate account</p>
+
+                <Suspense fallback={null}>
+                  <LoginSearchParams />
+                </Suspense>
               </div>
 
               <Tabs defaultValue="email" className="w-full">
