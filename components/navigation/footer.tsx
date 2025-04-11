@@ -25,18 +25,10 @@ export function Footer() {
                 <Twitter className="h-5 w-5" />
                 <span className="sr-only">Twitter</span>
               </Button>
-              <a href="https://www.instagram.com/slatemate.in" // replace with your actual IG handle
-                target="_blank"
-                rel="noopener noreferrer"
-                >
               <Button variant="ghost" size="icon" className="rounded-full hover:bg-primary-foreground/10">
                 <Instagram className="h-5 w-5" />
                 <span className="sr-only">Instagram</span>
               </Button>
-                <a href="https://www.linkedin.com/company/slate-mate/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
               <Button variant="ghost" size="icon" className="rounded-full hover:bg-primary-foreground/10">
                 <Linkedin className="h-5 w-5" />
                 <span className="sr-only">LinkedIn</span>
