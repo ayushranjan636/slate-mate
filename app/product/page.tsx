@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     description: "Discover how SlateMate serves schools, parents, and students with its AI-powered learning platform.",
     url: "https://www.slatemate.in/product",
     siteName: "SlateMate",
-    type: "product",
+    type: "website",
     images: [
       {
         url: "https://www.slatemate.in/og-image.jpg",
