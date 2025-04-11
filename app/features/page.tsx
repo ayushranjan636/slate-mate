@@ -1,6 +1,6 @@
-import type { Metadata } from "next"
-import { Suspense } from "react"
-import FeaturesPageContent from "./_components/FeaturesPageContent"
+import type { Metadata } from "next";
+import { Suspense } from "react";
+import FeaturesPageContent from "./_components/FeaturesPageContent";
 
 export const metadata: Metadata = {
   title: "Features | SlateMate",
@@ -27,4 +27,18 @@ export const metadata: Metadata = {
       },
     ],
   },
-  twitter:
+  twitter: {
+    card: "summary_large_image",
+    title: "SlateMate Features",
+    description: "AI-powered school management and parental control in one platform.",
+    images: ["https://www.slatemate.in/twitter-image.png"],
+  },
+};
+
+export default function Page() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <FeaturesPageContent />
+    </Suspense>
+  );
+}
