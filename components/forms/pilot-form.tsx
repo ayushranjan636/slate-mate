@@ -1,7 +1,6 @@
 "use client"
 
 import type React from "react"
-
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -50,32 +49,53 @@ export function PilotForm({ triggerButton }: { triggerButton: React.ReactNode })
     e.preventDefault()
     setIsSubmitting(true)
 
-    // Simulate API call
     try {
-      await new Promise((resolve) => setTimeout(resolve, 1500))
-      toast({
-        title: "Application submitted!",
-        description: "We'll be in touch with you shortly about the pilot program.",
-      })
-      setIsSubmitting(false)
-      // Reset form or close dialog
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        role: "",
-        students: "",
-        interest: "",
-        updates: true,
-      })
+      const response = await fetch(
+        "https://script.google.com/macros/s/AKfycbwVNgdUCAhysz4Goguu98jVx8GjgxxbvcnfOQH3MD3aFEl9YKWJ_l9X5oFLXYSNAUacqQ/exec",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+          },
+          body: new URLSearchParams({
+            name: formData.name,
+            email: formData.email,
+            phone: formData.phone,
+            role: formData.role,
+            students: formData.students,
+            interest: formData.interest,
+            updates: formData.updates ? "Yes" : "No",
+          }),
+        },
+      )
+
+      if (response.ok) {
+        toast({
+          title: "Application submitted!",
+          description: "We'll be in touch with you shortly about the pilot program.",
+        })
+
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          role: "",
+          students: "",
+          interest: "",
+          updates: true,
+        })
+      } else {
+        throw new Error("Network error")
+      }
     } catch (error) {
       toast({
         title: "Something went wrong",
         description: "Your application couldn't be submitted. Please try again.",
         variant: "destructive",
       })
-      setIsSubmitting(false)
     }
+
+    setIsSubmitting(false)
   }
 
   return (
