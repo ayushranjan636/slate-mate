@@ -17,21 +17,68 @@ export function Footer() {
               Parent-Controlled Safety.
             </p>
             <div className="flex space-x-3">
-              <Button variant="ghost" size="icon" className="rounded-full hover:bg-primary-foreground/10">
-                <Facebook className="h-5 w-5" />
-                <span className="sr-only">Facebook</span>
+              <Button
+                asChild
+                variant="ghost"
+                size="icon"
+                className="rounded-full hover:bg-primary-foreground/10"
+              >
+                <a
+                  href="https://www.facebook.com/profile.php?id=61575675892179"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Facebook className="h-5 w-5" />
+                  <span className="sr-only">Facebook</span>
+                </a>
               </Button>
-              <Button variant="ghost" size="icon" className="rounded-full hover:bg-primary-foreground/10">
-                <Twitter className="h-5 w-5" />
-                <span className="sr-only">Twitter</span>
+
+              <Button
+                asChild
+                variant="ghost"
+                size="icon"
+                className="rounded-full hover:bg-primary-foreground/10"
+              >
+                <a
+                  href="https://x.com/slatemate_"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Twitter className="h-5 w-5" />
+                  <span className="sr-only">Twitter</span>
+                </a>
               </Button>
-              <Button variant="ghost" size="icon" className="rounded-full hover:bg-primary-foreground/10">
-                <Instagram className="h-5 w-5" />
-                <span className="sr-only">Instagram</span>
+
+              <Button
+                asChild
+                variant="ghost"
+                size="icon"
+                className="rounded-full hover:bg-primary-foreground/10"
+              >
+                <a
+                  href="https://instagram.com/slatemate.in"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Instagram className="h-5 w-5" />
+                  <span className="sr-only">Instagram</span>
+                </a>
               </Button>
-              <Button variant="ghost" size="icon" className="rounded-full hover:bg-primary-foreground/10">
-                <Linkedin className="h-5 w-5" />
-                <span className="sr-only">LinkedIn</span>
+
+              <Button
+                asChild
+                variant="ghost"
+                size="icon"
+                className="rounded-full hover:bg-primary-foreground/10"
+              >
+                <a
+                  href="https://linkedin.com/company/slate-mate"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Linkedin className="h-5 w-5" />
+                  <span className="sr-only">LinkedIn</span>
+                </a>
               </Button>
             </div>
           </div>
