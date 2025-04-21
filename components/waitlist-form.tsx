@@ -20,14 +20,25 @@ export function WaitlistForm({ variant = "light", buttonText = "Join Now" }: Wai
 
     setIsSubmitting(true)
 
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1000))
+    try {
+      await fetch(
+        "https://script.google.com/macros/s/AKfycbwMQtWuyj3zYV0C1rPccD1ta29ITK-ibcUwX7c0CeN67r9X9r0P7OtAGQivYnlPRk-t/exec",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+          },
+          body: new URLSearchParams({ email }),
+        },
+      )
+
+      setIsSuccess(true)
+      setEmail("")
+    } catch (error) {
+      console.error("Error submitting email:", error)
+    }
 
     setIsSubmitting(false)
-    setIsSuccess(true)
-    setEmail("")
-
-    // Reset success message after 3 seconds
     setTimeout(() => setIsSuccess(false), 3000)
   }
 
