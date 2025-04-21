@@ -160,7 +160,9 @@ export default function Home() {
                   size="lg"
                   className="bg-transparent border-2 border-white/20 hover:bg-white/10"
                 >
+                  <Link href="/schedule-demo" className="flex items-center">                  
                   Schedule Demo
+                  </Link>
                 </Button>
               </div>
             </div>
